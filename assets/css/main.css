@@ -1708,6 +1708,7 @@ input, select, textarea {
 			/* height: calc(40vh - 2em); */
 			min-height: 13.5em;
 			width: 25%;
+			border: 1px solid black;
 		}
 
 			#main .thumb:nth-child(1) {
@@ -2011,8 +2012,8 @@ input, select, textarea {
 				-webkit-transition-delay: 1.175s;
 				-ms-transition-delay: 1.175s;
 				transition-delay: 1.175s;
-				height: calc(40vh - 2em);
-				min-height: 18em;
+				/* height: calc(40vh - 2em); */
+				min-height: 13.5em;
 				width: 100%;
 			}
 
