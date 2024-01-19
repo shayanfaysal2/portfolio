@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d0c5025972.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <title>Shayan Faysal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+    <script>
+        // Function to check if the device is a mobile
+        function isMobile() {
+            return window.innerWidth <= 1200; // Adjust the width based on your needs
+        }
+    
+        // Function to rearrange project content for mobile devices
+        function rearrangeProjects() {
+            var projects = document.querySelectorAll('.project');
+    
+            projects.forEach(function(project, index) {
+                var projectContent = project.querySelector('.project-content');
+                var projectText = project.querySelector('.project-texts');
+                var projectImage = project.querySelector('.project-image');
+                var separator = project.querySelector('.separator');
+
+                //if desktop
+                if (!isMobile())
+                {
+                    //if even then normal
+                    if (index % 2 === 0)
+                    {
+                        projectContent.appendChild(projectImage);
+                        projectContent.appendChild(separator);
+                        projectContent.appendChild(projectText);
+                        var child = projectText.firstElementChild;
+                        child.className = "project-text";
+                    }
+                    //else alternate
+                    else
+                    {     
+                        projectContent.appendChild(projectText);
+                        projectContent.appendChild(separator);
+                        projectContent.appendChild(projectImage);
+                        var child = projectText.firstElementChild;
+                        child.className = "project-text-right";
+                    }
+                }
+                //if mobile
+                else
+                {
+                    //all normal
+                    projectContent.appendChild(projectImage);
+                    projectContent.appendChild(separator);
+                    projectContent.appendChild(projectText);
+                    var child = projectText.firstElementChild;
+                    child.className = "project-text";
+                }
+            });
+        }
+    
+        // Call the function on page load
+        window.onload = rearrangeProjects;
+    
+        // Call the function on window resize to handle changes in orientation
+        window.onresize = rearrangeProjects;
+
+        function topFunction() {
+        // Scroll to the top of the page when the button is clicked
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+    }
+    </script>
+</head>
+
+<body>
+    <section class="banner">
+        <img src="./backgrounds/mountains.gif" alt="Banner Image" class="blurred-img">
+        <div class="profile">
+            <img class="profile-img" src="images/pfp.png" alt="Profile Image">
+            <h1>Shayan Faysal</h1>
+            <h3>Unity Game Developer</h3>
+            <a href="https://www.linkedin.com/in/shayanfaysal/" target="_blank" class="social-icons"><img src="icons/linkedin.png"></a>
+            <a href="https://www.instagram.com/shayanfaysal/" target="_blank" class="social-icons"><img src="icons/instagram.png"></a>
+            <!-- <a href="mailto:shayanfaysal2@gmail.com" target="_blank" class="social-icons"><img src="icons/email.png"></a> -->
+            <a href="https://www.fiverr.com/shayanfaysal" target="_blank" class="social-icons"><img src="icons/fiverr.png"></a>
+            <!-- <a href="https://www.linkedin.com/in/shayanfaysal/" class="social-icons"><i class="fa-brands fa-linkedin fa-2xl white-icon"></i></a>
+            <a href="https://www.instagram.com/shayanfaysal/" class="social-icons"><i class="fa-brands fa-instagram fa-2x white-icon"></i></a>
+            <a href="mailto:shayanfaysal2@gmail.com" class="social-icons"><i class="fa-regular fa-envelope fa-2xl white-icon"></i></a> -->
+        </div>
+    </section>
+    <div style="text-align: center;">
+        <h1>Portfolio</h1>
+    </div>
+    <section class="projects">
+
+        <div class="project">
+            <div class="project-content">
+                <img src="portfolio/astrotypers.gif" alt="Project Image" class="project-image">
+                <div class="separator"></div>
+                <div class="project-texts">
+                    <div class="project-text">
+                        <h2>🧑‍🚀 Astro Typers</h2>
+                        <p>
+                            A free online typing game that puts your typing skills to the test in a fun, simple way. As you type the words appearing on platforms, you leap forward, with the pace quickening as you progress. Mistyping a word means starting over, adding a layer of challenge. This game is not just about speed, but also precision. Dive into this infinite scroll typing game to help sharpen your typing accuracy and speed.
+                        </p>
+                        <p><b>Platform</b>: Web</p>
+                        <p><b><a href="https://skillprepare.com/astro-typers-free-typing-game/" target="_blank"><img class="gp-button" style="width:200px;" src="buttons/astroTypersPlay.png"></a></b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="horizontal-separator"></div>
+
+        <div class="project">
+            <div class="project-content">
+                <div class="project-texts">
+                    <div class="project-text-right">
+                        <h2>👶 Hide & Seek Survivor</h2>
+                        <p>
+                            A thrilling baby-themed game where you navigate playgrounds with adorable babies, collecting stars while evading cute monster enemies. Challenge friends in hide-and-seek or escape monsters in the other game modes by staying on high ground. Featuring daily rewards and customization, it's endless fun for all ages. Can you outsmart the monsters and be the hide-and-seek champion?
+                        </p>
+                        <p><b>Platform</b>: Android</p>
+                    </div>
+                </div>
+                <div class="separator"></div>
+                <img src="portfolio/hidenseek.gif" alt="Project Image" class="project-image">
+            </div>
+        </div>
+
+        <div class="horizontal-separator"></div>
+
+        <div class="project">
+            <div class="project-content">
+                <img src="portfolio/napalmstrike.gif" alt="Project Image" class="project-image">
+                <div class="separator"></div>
+                <div class="project-texts">
+                    <div class="project-text">
+                        <h2>✈️ Napalm Strike</h2>
+                        <p>
+                            Soar into intense aerial combat in this adrenaline-pumping 2D side-scrolling airplane game! Battle soldiers, tanks, drones, aircraft, and helicopters using an array of powerful weapons and strategic power-ups, from bombs to homing missiles. Upgrade your plane with boosts to health, shields, and shooting power as you progress through 30 action-packed levels. Unlock new planes for even more thrilling dogfights and become the ultimate airborne champion in this explosive and dynamic gaming experience.
+                            <p><b>Platform</b>: Android</p>
+                        <p><b><a href="https://play.google.com/store/apps/details?id=com.shayanfaysal.NapalmStrike" target="_blank"><img class="gp-button" style="width:200px;" src="buttons/gp.png"></a></b></p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="horizontal-separator"></div>
+
+        <div class="project">
+            <div class="project-content">  
+                <div class="project-texts">
+                    <div class="project-text-right">
+                        <h2>🧟 Z City</h2>
+                        <p>
+                            A 3D endless running game inspired by Temple Run and set in a post-apocalyptic world. Choose between a male or female character, and run for your life from a relentless horde of zombies. Swipe to navigate through city roads, jumping over obstacles like wrecked cars and fallen trees. Collect coins for points and speed boosts, testing your survival instincts in this thrilling race against the undead. Can you outrun the apocalypse?
+                        </p>
+                        <p><b>Platform</b>: Android</p>
+                    </div>
+                </div>
+                <div class="separator"></div>
+                <img src="portfolio/zcity.gif" alt="Project Image" class="project-image">
+            </div>
+        </div>
+
+        <div class="horizontal-separator"></div>
+
+        <div class="project">
+            <div class="project-content">
+                <img src="portfolio/flappybudgies.gif" alt="Project Image" class="project-image">
+                <div class="separator"></div>
+                <div class="project-texts">   
+                    <div class="project-text">
+                        <h2>🦜 Flappy Budgies</h2>
+                        <p>
+                            A twist on the classic flappy genre featuring cute budgies and many different environments to explore! Tap to fly and guide your budgies/parakeets through beautiful artistic environments, all while enjoying the soothing retro music and vibes. Features an online leaderboard for added competition. Do you think it's too easy? Don't worry, the game gets harder and harder the further you go!
+                        </p>
+                        <p><b>Platform</b>: Android</p>   
+                        <p><b><a href="https://play.google.com/store/apps/details?id=com.shayanfaysal.FlappyBudgies" target="_blank"><img class="gp-button" style="width:200px;" src="buttons/gp.png"></a></b></p>
+                    </div>
+                </div>   
+            </div>
+        </div>
+
+        <div class="horizontal-separator"></div>
+
+        <div class="project">
+            <div class="project-content">
+                <div class="project-texts">
+                    <div class="project-text-right">
+                        <h2>☠️ Forest Creature</h2>
+                        <p>
+                            Lost in the chilling depths of a dark forest, immerse yourself in heart-pounding terror with this 3D first-person mobile horror escape game. As you navigate the eerie shadows, beware of towering ghoul creatures lurking in the darkness, ready to chase you at the slightest sight. Brace yourself for spine-chilling jumpscares, as every step taken in this haunting escape game inches you closer to the unknown horrors that await. Can you escape the forest's clutches before the creatures close in?
+                        </p>
+                        <p><b>Platform</b>: Android, PC</p>
+                    </div>
+                </div>
+                <div class="separator"></div>
+                <img src="portfolio/forestcreature.gif" alt="Project Image" class="project-image">
+            </div>
+        </div>
+
+        <div class="horizontal-separator"></div>
+
+        <div class="project">
+            <div class="project-content">
+                <img src="portfolio/astrobit.gif" alt="Project Image" class="project-image">
+                <div class="separator"></div>
+                <div class="project-texts">
+                    <div class="project-text">
+                        <h2>🪐 Astrobit</h2>
+                        <p>
+                            Adventure awaits you as you travel through space. The stars are yours for the taking! Collect as many as possible to unlock new skins and outfits in the shop. Run and jump in the galactic environment, making sure not to fall down into the abyss. Oh, and just don't let those pesky aliens stop you along the way.
+                        </p>
+                        <p><b>Platform</b>: Android</p>
+                        <p><b><a href="https://play.google.com/store/apps/details?id=com.lady_op3.Astrobit&hl=en" target="_blank"><img class="gp-button" style="width:200px;" src="buttons/gp.png"></a></b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="horizontal-separator"></div>
+
+        <div class="project">
+            <div class="project-content">
+                <div class="project-texts">
+                    <div class="project-text-right">
+                        <h2>🌱 Garden Guardians</h2>
+                        <p><i>Submission for Mindstorm Studios Rookie Game Jam 2023</i></p>
+                        <p>
+                            In this cute 3D tower defense game, you play as a water character cultivating crops in hexagonal fields. Use your watering can to grow crops and fend off adorable fire characters. Unlock hexagon areas after each wave, strategically deploying shields and scarecrows. With its charming characters and vibrant graphics, 'Garden Guardians' delivers a delightful mix of farming and firefighting challenges in a compact package.
+                        </p>
+                        <p><b>Platform</b>: Android</p>
+                    </div>
+                </div>   
+                <div class="separator"></div>    
+                <p><iframe class="project-image" width="600" height="353" src="https://www.youtube.com/embed/d1bUknxOaRY" title="" frameBorder="0"   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowFullScreen></iframe></p>
+            </div>
+        </div>
+
+        <div class="horizontal-separator"></div>
+
+        <div class="project"> 
+            <div class="project-content">
+                <img src="portfolio/swordmasters.gif" alt="Project Image" class="project-image">
+                <div class="separator"></div>
+                <div class="project-texts">
+                    <div class="project-text">
+                        <h2>⚔️ Sword Masters</h2>
+                        <p>
+                            "Sword Masters" beckons you into a realm where ancient Sword Masters sought glory, guided by fickle Gods and destined for bloodshed. Take up the path of these brave warriors, fighting sword to sword in a quest for victory. As the cruel Gods' champion, your journey unfolds in swipes and taps, paying homage to legendary 8-bit titles. With joypad/controller support, embrace the challenge, and may your sword find glory in this homage to classic inspirations.
+                        </p>
+                        <p><b>Platform</b>: Android</p>
+                        <p><b><a href="https://play.google.com/store/apps/details?id=com.BaoCatGames.SwordMasters" target="_blank"><img class="gp-button" style="width:200px;" src="buttons/gp.png"></a></b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="horizontal-separator"></div>
+
+        <div class="project">
+            <div class="project-content">
+                <div class="project-texts">
+                    <div class="project-text-right">
+                        <h2>🏁 Kleekartz</h2>
+                        <p>
+                            A Mario Kart inspired karting game with three maps and different time settings. Choose from four characters, collect coins for upgrades and use speed boosts strategically. It's a casual racing experience with a mix of tracks and characters for laid-back enjoyment. Can you beat your opponent and become the karting champion?
+                        </p>
+                        <p><b>Platform</b>: PC</p>
+                    </div>
+                </div>
+                <div class="separator"></div>
+                <img src="portfolio/kleekartz.gif" alt="Project Image" class="project-image">
+            </div>
+        </div>
+
+        <div class="horizontal-separator"></div>
+
+        <div class="project">
+            <div class="project-content">
+                <img src="portfolio/rocketblaster.gif" alt="Project Image" class="project-image">
+                <div class="separator"></div>
+                <div class="project-texts">
+                    <div class="project-text">
+                        <h2>🚀 Rocket Blaster</h2>
+                        <p>
+                            A sleek 2D minimalistic game where simplicity meets challenge. Navigate a rotating rocket by tapping to change its direction, avoiding obstacles like debris and gravity holes. Collect power-ups to enhance your cosmic adventure. Customize your experience with purchasable skins and trails for the rocket, adding a touch of personal flair. Get ready to blast off!.. but be careful with obstacles!
+                        </p>
+                        <p><b>Platform</b>: Android</p>
+                        <p><b><a href="https://play.google.com/store/apps/details?id=com.kapoyapps.rocketblaster" target="_blank"><img class="gp-button" style="width:200px;" src="buttons/gp.png"></a></b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="horizontal-separator"></div>
+
+        <div class="project">
+            <div class="project-content">
+                <div class="project-texts">
+                    <div class="project-text-right">
+                        <h2>🛹 Bones Battalion</h2>
+                        <p>
+                            The ultimate 2D skateboarding adventure! Skate through an endless warehouse filled with boxes and lamps. Jump, grind, and showcase your skills to become the legend of the skateboarding underworld. Unlock new skins, compete on the leaderboard, and rise to the top with your sickest tricks. Skate on, and let the bone-crushing competition begin!
+                        </p>
+                        <p><b>Platform</b>: Web, Android</p>
+                    </div>
+                </div>
+                <div class="separator"></div>
+                <img src="portfolio/bonesbattalion.gif" alt="Project Image" class="project-image">
+            </div>
+        </div>
+
+        <div class="horizontal-separator"></div>
+
+        <div class="project">
+            <div class="project-content">
+                <img src="portfolio/papertrails.gif" alt="Project Image" class="project-image">
+                <div class="separator"></div>
+                <div class="project-texts">
+                    <div class="project-text">
+                        <h2>🛩️ Paper Trails</h2>
+                        <p><i>Winner of M-LABS Pod Game Jam '23</i></p>
+                        <p>
+                            Developed in a team of three, "Paper Trails" is a captivating 2D game where you control an origami paper plane by drawing its path on the screen. Avoid thunder clouds and balloons, collect coins, and pass through hoops to conquer each level. Will you master the skies and leave your mark on this paper plane journey?
+                        </p>
+                        <p><b>Platform</b>: Android</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="horizontal-separator"></div>
+
+        <div class="project">
+            <div class="project-content">
+                <div class="project-texts">
+                    <div class="project-text-right">
+                        <h2>🚲 BMX Stunt Mania</h2>
+                        <p><i>Winner of NaSCon '23' Game Dev Showdown</i></p>
+                        <p>
+                            A thrilling 2D hill climb racing game that puts your skills to the test! Jump onto BMXs, bikes, and other exciting vehicles as you race against an AI opponent to reach the end of the map. Collect coins for extra points and unleash your inner daredevil by performing flips and stunts along the way. The competition is fierce, the terrain is challenging, and the excitement is non-stop in this high-speed showdown.
+                        </p>
+                        <p><b>Platform</b>: Android</p>
+                    </div>
+                </div>
+                <div class="separator"></div>
+                <img src="portfolio/bmxstuntmania.gif" alt="Project Image" class="project-image">
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p style="text-align: center; margin: 20px 0;">
+            © 2024 Shayan Faysal
+        </p>
+    </footer>
+</body>
+
+</html>
